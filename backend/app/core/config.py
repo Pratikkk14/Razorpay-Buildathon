@@ -31,8 +31,12 @@ class Settings(BaseSettings):
     DEFAULT_INTERVENTION_BUDGET_DAILY: float = 5000.0
 
     # ML Interface Settings
-    DEFAULT_ML_MODEL_NAME: str = "MockPropensityUpliftV1"
-    DEFAULT_ML_MODEL_VERSION: str = "1.0.0"
+    DEFAULT_ML_MODEL_NAME: str = "CatBoostRecoveryPropensity"
+    DEFAULT_ML_MODEL_VERSION: str = "1.2.0"
+    ACTIVE_ML_SERVICE: str = "catboost"
+    CATBOOST_MODEL_PATH: str = "razorpay_recovery/outputs/recovery_model.cbm"
+    CATBOOST_FEATURE_CONFIG_PATH: str = "razorpay_recovery/outputs/feature_config.json"
+    CATBOOST_ECONOMIC_CONFIG_PATH: str = "razorpay_recovery/outputs/economic_config.json"
     CONFIDENCE_THRESHOLD: float = 0.65
 
     # CORS

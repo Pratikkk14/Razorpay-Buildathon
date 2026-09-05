@@ -88,3 +88,21 @@ def list_safety_veto_logs(limit: int = 50, db: Session = Depends(get_db)):
         }
         for v in vetoed_evals
     ]
+
+
+@router.get("/models")
+def get_ml_models_status():
+    """Lists registered ML inference services and the currently active model."""
+    from app.services.ml.registry import list_available_services
+    return list_available_services()
+
+
+@router.post("/models/switch")
+def switch_active_ml_model(payload: Dict[str, str]):
+    """Switches the active ML inference model (e.g. 'catboost', 'mock')."""
+    from app.services.ml.registry import set_active_service
+    target = payload.get("service_key", "catboost")
+    success = set_active_service(target)
+    return {"success": success, "active_service": target if success else "unchanged"}
+
+
