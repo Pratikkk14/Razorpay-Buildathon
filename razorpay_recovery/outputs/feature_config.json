@@ -1,0 +1,75 @@
+{
+  "target": "resolved",
+  "numerical_features": [
+    "amount",
+    "attempt_count",
+    "hours_since_first_failure",
+    "interventions_count",
+    "consecutive_failures",
+    "customer_ltv",
+    "customer_failure_rate",
+    "subscription_paid_count",
+    "account_tenure_days",
+    "lifetime_success_rate",
+    "days_since_last_success",
+    "historical_ltv",
+    "timestep"
+  ],
+  "boolean_features": [
+    "is_weekend",
+    "is_first_ever_failure"
+  ],
+  "categorical_features": [
+    "failure_reason",
+    "customer_archetype",
+    "action"
+  ],
+  "derived_features": [
+    "amount_to_ltv_ratio",
+    "attempt_bucket",
+    "failure_recency_bucket",
+    "intervention_pressure"
+  ],
+  "all_model_features": [
+    "amount",
+    "attempt_count",
+    "hours_since_first_failure",
+    "interventions_count",
+    "consecutive_failures",
+    "customer_ltv",
+    "customer_failure_rate",
+    "subscription_paid_count",
+    "account_tenure_days",
+    "lifetime_success_rate",
+    "days_since_last_success",
+    "historical_ltv",
+    "timestep",
+    "is_weekend",
+    "is_first_ever_failure",
+    "failure_reason",
+    "customer_archetype",
+    "action",
+    "amount_to_ltv_ratio",
+    "attempt_bucket",
+    "failure_recency_bucket",
+    "intervention_pressure"
+  ],
+  "catboost_categorical_features": [
+    "failure_reason",
+    "customer_archetype",
+    "action",
+    "attempt_bucket",
+    "failure_recency_bucket"
+  ],
+  "missing_category_token": "__MISSING__",
+  "baseline_action": "WAIT",
+  "all_actions": [
+    "WAIT",
+    "RETRY",
+    "PAYMENT_LINK",
+    "SEND_REMINDER",
+    "REQUEST_ALTERNATE_METHOD",
+    "ESCALATE_TO_HUMAN",
+    "STOP_RECOVERY"
+  ]
+}

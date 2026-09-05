@@ -1,0 +1,14 @@
+{
+  "action_costs": {
+    "WAIT": 0.0,
+    "STOP_RECOVERY": 0.0,
+    "RETRY": 5.0,
+    "SEND_REMINDER": 10.0,
+    "PAYMENT_LINK": 15.0,
+    "REQUEST_ALTERNATE_METHOD": 20.0,
+    "ESCALATE_TO_HUMAN": 150.0
+  },
+  "friction_cost_per_prior_intervention": 2.0,
+  "min_net_contribution_to_act": 25.0,
+  "min_incremental_lift_to_act": 0.01
+}
