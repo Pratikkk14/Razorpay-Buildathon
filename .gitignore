@@ -1,2 +1,37 @@
+# Virtual environments
+myvenv/
+.venv/
+env/
+venv/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+recovery_engine.db
+
+# Node / Frontend artifacts
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.DS_Store
+*.local
+
+# Environment variables & local secrets
+.env
+.env.*
+!.env.example
+
+# Instructions & reference repositories
 reference-repos/
 instructions.md
